@@ -1,0 +1,60 @@
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[user]
+	name = Benny Wong
+	email = bwong337@gmail.com
+[alias]
+  d   = diff --patch-with-stat --ignore-space-change
+  dc  = diff --patch-with-stat --ignore-space-change --cached
+  co  = checkout
+  cob = checkout -b
+  ci  = commit
+  ca  = commit -a
+  st  = status
+  pl  = pull --rebase
+  pu  = push
+  br  = branch
+  bd  = branch -D
+  sl  = stash list
+  sh  = stash
+  cp  = cherry-pick
+  lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  la  = log --name-status --date-order
+  lla = log --patch-with-stat --ignore-space-change --date-order
+  l   = log --name-status --date-order --author=brian
+  lp  = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --author=brian
+  showfiles = show --pretty="format:" --name-only
+  ll  = log --patch-with-stat --ignore-space-change --date-order --author=brian
+  cl  = !sh -c 'git log --name-status --date-order --author=brian --no-merges --left-right --cherry-pick $0...HEAD'
+  cll = !sh -c 'git log --patch-with-stat --ignore-space-change --date-order --author=brian --no-merges --left-right --cherry-pick $0...HEAD'
+  cr  = !sh -c 'git rev-list --date-order --author=brian --no-merges --left-right --cherry-pick $0...HEAD'
+  pp  = !sh -c 'git pull && git push'
+  sl  = stash list
+  sh  = stash
+  sv  = stash save
+  sl  = stash list
+  sd  = !sh -c 'git stash show --patch-with-stat stash@{${0/sh/0}}'
+  sp  = !sh -c 'git stash pop   stash@{${0/sh/0}}'
+  sa  = !sh -c 'git stash apply stash@{${0/sh/0}}'
+  stash-drop = !sh -c 'git stash drop  stash@{${0/sh/0}}'
+  abort-merge = reset --hard HEAD
+  undo-commit = reset --soft HEAD^
+  water = pull --rebase origin develop
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
+  adduntracked=!git add $(git ls-files -o --exclude-standard)
+  logg = log --no-merges
+[color]
+	ui = true
+[core]
+	autocrlf = input
+	excludesfile = /Users/bwong/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
