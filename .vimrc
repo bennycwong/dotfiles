@@ -2,9 +2,10 @@
 execute pathogen#infect()
 
 syntax on
-syntax enable
 set background=dark
 colorscheme monokai
+set background=dark
+colorscheme hybrid
 
 " set relative line numbers
 set relativenumber
