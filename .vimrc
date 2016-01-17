@@ -10,4 +10,7 @@ Plug 'elixir-lang/vim-elixir'
 
 call plug#end()
 
+runtime macros/matchit.vim
 
+" Give a shortcut key to NERD Tree
+ map <F2> :NERDTreeToggle<CR>
