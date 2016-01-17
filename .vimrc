@@ -2,7 +2,13 @@
 execute pathogen#infect()
 
 syntax on
-colorscheme jellybeans
+syntax enable
+set background=dark
+colorscheme monokai
+
+" set relative line numbers
+set relativenumber
+
 
 " Use spaces instead of tabs
 set expandtab
@@ -58,6 +64,7 @@ set laststatus=2
 " Format the status line
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \Line:\ %l
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
 " Return to last edit position when opening files (You want this!)
