@@ -45,17 +45,13 @@ let NERDTreeShowHidden=1
 "autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
-
-
 "paste toggle indent
 :set pastetoggle=<F3>
-
 
 filetype plugin on
 filetype indent on
 
 set encoding=utf8
-
 
 """"""""""""""""""""""""""""""
 " => Status line
