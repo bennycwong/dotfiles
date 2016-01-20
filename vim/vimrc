@@ -1,9 +1,13 @@
-"Pathogen Start
+"Pathogen Start to install plugins
 execute pathogen#infect()
 
+"""""""""""""""""""""""""""""""""""
+" => Set Color/Themes/general look"
+"""""""""""""""""""""""""""""""""""
 syntax on
 set background=dark
 colorscheme monokai
+"I have to set background twice to make it work...
 set background=dark
 colorscheme hybrid
 
@@ -11,24 +15,37 @@ colorscheme hybrid
 set relativenumber
 
 
+"""""""""""""""""""""""""""""""""""""""
+" => Leader mappings                  "
+"""""""""""""""""""""""""""""""""""""""
+" Use the space key as our leader. Put this near the top of your vimrc
+let mapleader = "\<Space>"
+
+" Split edit your vimrc. Type space, v, r in sequence to trigger
+nmap <leader>vr :sp $MYVIMRC<cr>
+
+" Source (reload) your vimrc. Type space, s, o in sequence to trigger
+nmap <leader>so :source $MYVIMRC<cr>
+
+"""""""""""""""""""
+" => Search Settings
+"""""""""""""""""""
+map <leader><space> /
+map <leader><c-space> ?
+set incsearch                          "Incremental Search
+set ic                                 "Case insensitive search
+runtime macros/matchit.vim             
+
+
 " Use spaces instead of tabs
 set expandtab
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
-
-"""""""""""""""""""
-" => Search Settings
-"""""""""""""""""""
-map <space> /
-map <c-space> ?
-set incsearch
-
-runtime macros/matchit.vim
-
+set ai                          "Auto indent
+set si                          "Smart indent
+set wrap                        "Wrap lines
+set scrolloff=4                 " Keep at least 4 lines below cursor
 
 """""""""""""""""""
 " => NERDTree Options
@@ -54,7 +71,7 @@ filetype indent on
 set encoding=utf8
 
 """"""""""""""""""""""""""""""
-" => Status line
+" => Status line             "
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
@@ -71,4 +88,20 @@ autocmd BufReadPost *
   \ endif
 " Remember info about open buffers on close
 set viminfo^=%
+
+"""""""""""""""""""""""""
+" => Autocommands       "
+"""""""""""""""""""""""""
+
+" Bind `q` to close the buffer for help files
+autocmd Filetype help nnoremap <buffer> q :q<CR>
+
+"catch stupid typos
+command! Q q                   " Bind :Q to :q
+command! Wq wq                 " Bind :Wq to :wq
+
+
+" Move up and down by visible lines if current line is wrapped
+nmap j gj
+nmap k gk
 
