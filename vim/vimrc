@@ -10,6 +10,7 @@ colorscheme monokai
 "I have to set background twice to make it work...
 set background=dark
 colorscheme hybrid
+let g:airline_theme='powerlineish'
 
 " set relative line numbers
 set relativenumber
