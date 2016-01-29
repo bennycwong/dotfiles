@@ -14,8 +14,8 @@ let g:airline_theme='powerlineish'
 
 " set relative line numbers
 set relativenumber
-
-
+" set backsapce to delete in insert mode
+set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""
 " => Leader mappings                  "
 """""""""""""""""""""""""""""""""""""""
