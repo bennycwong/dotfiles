@@ -9,7 +9,7 @@ set background=dark
 colorscheme monokai
 "I have to set background twice to make it work...
 set background=dark
-colorscheme hybrid
+colorscheme jellybeans
 let g:airline_theme='powerlineish'
 
 " set relative line numbers
@@ -106,3 +106,20 @@ command! Wq wq                 " Bind :Wq to :wq
 nmap j gj
 nmap k gk
 
+"Ignore
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
+
+"CtrlP bindings
+map ff :CtrlP<.><cr>
+let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|\.svn$\|.rvm$|.bundle$\|vendor'
+"Use ag
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+
+"""Window Options""""
+set splitbelow
+set splitright
