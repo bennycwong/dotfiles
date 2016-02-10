@@ -8,11 +8,12 @@ syntax on
 "I have to set background twice to make it work...
 set background=dark
 colorscheme base16-ocean
+let base16colorspace=256
 let g:airline_theme='base16_ocean'
-
 " set relative line numbers
 set relativenumber
 " set backsapce to delete in insert mode
+set paste
 set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""
 " => Leader mappings                  "
