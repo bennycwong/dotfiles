@@ -5,12 +5,10 @@ execute pathogen#infect()
 " => Set Color/Themes/general look"
 """""""""""""""""""""""""""""""""""
 syntax on
-set background=dark
-colorscheme monokai
 "I have to set background twice to make it work...
 set background=dark
-colorscheme jellybeans
-let g:airline_theme='powerlineish'
+colorscheme base16-ocean
+let g:airline_theme='base16_ocean'
 
 " set relative line numbers
 set relativenumber
@@ -35,7 +33,7 @@ map <leader><space> /
 map <leader><c-space> ?
 set incsearch                          "Incremental Search
 set ic                                 "Case insensitive search
-runtime macros/matchit.vim             
+runtime macros/matchit.vim
 
 
 " Use spaces instead of tabs
@@ -123,3 +121,9 @@ endif
 """Window Options""""
 set splitbelow
 set splitright
+
+"""Paste mode""""
+set paste
+
+""Trim whitesepace"""
+autocmd BufWritePre * StripWhitespace
