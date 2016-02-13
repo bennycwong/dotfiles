@@ -127,4 +127,5 @@ set splitright
 set paste
 
 ""Trim whitesepace"""
-autocmd BufWritePre * StripWhitespace
+
+"autocmd BufWritePre * StripWhitespace

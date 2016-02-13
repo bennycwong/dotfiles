@@ -2,7 +2,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod1
+set $mod Mod4
 
 ##Border Colors##
 client.focused          #96b5b4 #96b5b4 #96b5b4 #96b5b4
@@ -215,9 +215,9 @@ bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace number $ws1
-bindsym $mod+Ctrl+2 move container to workspace number $ws2
-bindsym $mod+Ctrl+3 move container to workspace number $ws3
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
 bindsym $mod+Ctrl+4 move container to workspace number 4
 bindsym $mod+Ctrl+5 move container to workspace number 5
 bindsym $mod+Ctrl+6 move container to workspace number 6
@@ -225,9 +225,9 @@ bindsym $mod+Ctrl+7 move container to workspace number 7
 bindsym $mod+Ctrl+8 move container to workspace number 8
 
 # Move to workspace with focused container
-bindsym $mod+Shift+1 move container to workspace number $ws1; workspace $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2; workspace $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3; workspace $ws3
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace number 4; workspace 4
 bindsym $mod+Shift+5 move container to workspace number 5; workspace 5
 bindsym $mod+Shift+6 move container to workspace number 6; workspace 6

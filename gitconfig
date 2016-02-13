@@ -3,7 +3,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [user]
-	name = Benny Wong
+	name = Benny C. Wong
 	email = bwong337@gmail.com
 [alias]
   d   = diff --patch-with-stat --ignore-space-change
