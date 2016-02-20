@@ -125,7 +125,3 @@ set splitright
 
 """Paste mode""""
 set paste
-
-""Trim whitesepace"""
-
-"autocmd BufWritePre * StripWhitespace
