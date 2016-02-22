@@ -16,7 +16,7 @@
   [[default]]
     allow_bold = False
     background_color = "#2b303b"
-    background_darkness = 0.8
+    background_darkness = 0.89
     background_image = None
     background_type = transparent
     copy_on_selection = True
