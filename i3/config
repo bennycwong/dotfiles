@@ -5,16 +5,17 @@
 
 set $mod Mod4
 
-set $teal #96b5b4
-set $gray #dcdccc
-set $blue #2b303b
+set $teal   #96b5b4
+set $gray   #dcdccc
+set $blue   #2b303b
+set $yellow #65737e
 
 ##Border Colors##
-# class                 border  backgr. text    indicator
-client.focused          $teal   $teal   $gray   $teal
-client.focused_inactive $blue   $blue   $gray   $teal
-client.unfocused        $blue   $blue   $gray   $teal
-client.urgent           $teal   $teal   $gray   $teal
+# class                 border    backgr.   text    indicator
+client.focused          $teal     $teal     $gray   $teal
+client.focused_inactive $blue     $blue     $gray   $teal
+client.unfocused        $blue     $blue     $gray   $teal
+client.urgent           $yellow   $yellow   $blue   $yellow
 
 #Rofi
 font pango:Noto Sans 10
@@ -52,15 +53,15 @@ bar {
     strip_workspace_numbers yes
 
     ##Run i3status Command With Custom Config File & Pipe Weather Script Into Output##
-    #status_command i3status -c ~/.config/i3/i3status.conf | ~/.config/i3/weather.py --position 4 --unit c --format ' {text}, {temp}°{unit_temperature}' --wrap-i3-status 33
+    status_command i3blocks
 
-    ##Set i3bar Color Scheme##
+		##Set i3bar Color Scheme##
     colors {
             ##Set i3bar Background Color##
             background #2b303b
 
             ##Set i3bar Text Color##
-            statusline #dcdccc
+            statusline #eff1f5
 
             ##Set Focused Workspace Color Scheme##
             focused_workspace  #96b5b4 #96b5b4 #dcdccc
