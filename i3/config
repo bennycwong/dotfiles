@@ -2,19 +2,24 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
+
 set $mod Mod4
 
-##Border Colors##
-client.focused          #96b5b4 #96b5b4 #96b5b4 #96b5b4
-client.focused_inactive #96b5b4 #96b5b4 #96b5b4 #96b5b4
-client.unfocused        #96b5b4 #96b5b4 #96b5b4 #96b5b4
-client.urgent           #96b5b4 #96b5b4 #96b5b4 #96b5b4
+set $teal #96b5b4
+set $gray #dcdccc
+set $blue #2b303b
 
+##Border Colors##
+# class                 border  backgr. text    indicator
+client.focused          $teal   $teal   $gray   $teal
+client.focused_inactive $blue   $blue   $gray   $teal
+client.unfocused        $blue   $blue   $gray   $teal
+client.urgent           $teal   $teal   $gray   $teal
 
 #Rofi
 font pango:Noto Sans 10
 ##Open Rofi Interface##
-bindsym $mod+d exec rofi -show run -font 'Avenir 20' -lines 3 -eh 2 -opacity 80 -hide-scrollbar -width 100 -padding 250 -bw 0 -bc "#8FA1B3" -bg "#2b303b" -fg "#ffffff" -hlbg "#2b303b" -hlfg "#8FA1B3"
+bindsym $mod+d exec rofi -show run -font 'DejaVu Sans 20' -lines 3 -eh 2 -opacity 80 -hide-scrollbar -width 100 -padding 250 -bw 0 -bc "#8FA1B3" -bg "#2b303b" -fg "#ffffff" -hlbg "#2b303b" -hlfg "#8FA1B3"
 
 #Startup
 
@@ -347,7 +352,7 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 for_window [class="^.*"] border pixel 2
 
 # Set inner/outer gaps
-gaps inner 15 
+gaps inner 0 
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
