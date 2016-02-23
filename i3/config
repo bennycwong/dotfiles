@@ -33,9 +33,6 @@ exec --no-startup-id compton -b
 ##Start Network-Manager Applet##
 exec --no-startup-id nm-applet
 
-##Apply Desktop Wallpaper##
-#exec --no-startup-id feh --bg-scale ~/Pictures/Rainbow.png 
-#base16
 
 ####################
 ## i3bar Settings ##
@@ -78,7 +75,7 @@ bar {
 }
 
 ##Enable vim i3 Syntax Highlighting##
-# vim:filetype=i3
+#vim:filetype=i3
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -103,13 +100,10 @@ font pango:DejaVu Sans Mono for Powerline 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator #i3-sensible-terminal 
+bindsym $mod+Return exec terminator 
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start program launcher
-#bindsym $mod+d exec --no-startup-id dmenu_recency
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -122,10 +116,6 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
-
-# Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -140,7 +130,6 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym Print exec "scrot -e 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Screenshots'; scrot -se 'mv $f ~/Screenshots'"
-bindsym $mod+Shift+h exec qpdfview i3_help.pdf
 bindsym $mod+Ctrl+x exec xkill
 
 # focus_follows_mouse no
@@ -205,7 +194,6 @@ set $ws1 www
 set $ws2 code
 set $ws3 git
 
-
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -253,7 +241,6 @@ for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 2
 for_window [class="GParted"] floating enable border normal
-for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="manjaro-settings-manager-gui"] floating enable border normal
@@ -281,9 +268,6 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
-# exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -329,19 +313,17 @@ mode "resize" {
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+# exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id compton -b
-exec --no-startup-id start_conky_grey
+# exec --no-startup-id start_conky_grey
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 
