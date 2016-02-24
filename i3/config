@@ -20,7 +20,7 @@ client.urgent           $yellow   $yellow   $blue   $yellow
 #Rofi
 font pango:Noto Sans 10
 ##Open Rofi Interface##
-bindsym $mod+d exec rofi -show run -font 'DejaVu Sans 20' -lines 3 -eh 2 -opacity 80 -hide-scrollbar -width 100 -padding 250 -bw 0 -bc "#8FA1B3" -bg "#2b303b" -fg "#ffffff" -hlbg "#2b303b" -hlfg "#8FA1B3"
+bindsym $mod+d exec rofi -show run -font 'DejaVu Sans 30' -lines 3 -eh 2 -opacity 80 -hide-scrollbar -width 100 -padding 250 -bw 0 -bc "#8FA1B3" -bg "#2b303b" -fg "#ffffff" -hlbg "#2b303b" -hlfg "#8FA1B3"
 
 #Startup
 
@@ -41,7 +41,7 @@ exec --no-startup-id nm-applet
 bar {
 
     ##Set Bar Font##
-    font pango:Noto Sans, FontAwesome 10
+    font pango:DejaVu Sans Condensed, FontAwesome 10
 
     ##Position Bar At Top Of Display##
     position top

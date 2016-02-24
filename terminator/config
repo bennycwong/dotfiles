@@ -19,7 +19,6 @@
     background_darkness = 0.89
     background_image = None
     background_type = transparent
-    copy_on_selection = True
     cursor_color = "#c0c5ce"
     custom_command = zsh
     font = Source Code Pro for Powerline 10
