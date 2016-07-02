@@ -6,6 +6,7 @@
 	name = Benny C. Wong
 	email = bwong337@gmail.com
 [alias]
+  bf  = branch --force
   d   = diff --patch-with-stat --ignore-space-change
   dc  = diff --patch-with-stat --ignore-space-change --cached
   co  = checkout

@@ -34,8 +34,11 @@ map <leader><space> /
 map <leader><c-space> ?
 set incsearch                          "Incremental Search
 set ic                                 "Case insensitive search
+set hlsearch
 runtime macros/matchit.vim
-
+map <leader>h :nohlsearch<cr>
+set ignorecase
+set smartcase
 
 " Use spaces instead of tabs
 set expandtab
@@ -92,6 +95,8 @@ set viminfo^=%
 """""""""""""""""""""""""
 " => Autocommands       "
 """""""""""""""""""""""""
+"Auto format elm on save"
+let g:elm_format_autosave = 1
 
 " Bind `q` to close the buffer for help files
 autocmd Filetype help nnoremap <buffer> q :q<CR>
@@ -125,3 +130,10 @@ set splitright
 
 """Paste mode""""
 set paste
+
+"""MACVIM options"""
+set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
+set guioptions-=r
+
+"""Transparent for pretty"""
+hi Normal ctermbg=none
