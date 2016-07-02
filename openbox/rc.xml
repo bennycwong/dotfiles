@@ -189,7 +189,7 @@
         <command>xautolock -locknow</command>
       </action>
     </keybind>
-    <keybind key="A-Left">
+    <keybind key="C-W-A-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -199,7 +199,7 @@
         <direction>west</direction>
       </action>
     </keybind>
-    <keybind key="A-Right">
+    <keybind key="C-W-A-Right">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -209,14 +209,14 @@
         <direction>east</direction>
       </action>
     </keybind>
-    <keybind key="A-Up">
+    <keybind key="C-W-A-Up">
         <action name="UnmaximizeFull"/>
         <action name="MoveResizeTo">
             <height>50%</height>
         </action>
         <action name="MoveToEdge"><direction>north</direction></action>
     </keybind>
-    <keybind key="A-Down">
+    <keybind key="C-W-A-Down">
         <action name="UnmaximizeFull"/>
         <action name="MoveResizeTo">
             <height>50%</height>
