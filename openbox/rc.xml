@@ -210,13 +210,18 @@
       </action>
     </keybind>
     <keybind key="A-Up">
-      <action name="Maximize"/>
-      <action name="MoveToEdge">
-        <direction>north</direction>
-      </action>
+        <action name="UnmaximizeFull"/>
+        <action name="MoveResizeTo">
+            <height>50%</height>
+        </action>
+        <action name="MoveToEdge"><direction>north</direction></action>
     </keybind>
     <keybind key="A-Down">
-      <action name="Unmaximize"/>
+        <action name="UnmaximizeFull"/>
+        <action name="MoveResizeTo">
+            <height>50%</height>
+        </action>
+        <action name="MoveToEdge"><direction>south</direction></action>
     </keybind>
     <keybind key="A-d">
       <action name="Execute">
