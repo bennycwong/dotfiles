@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>flat-google</name>
+    <name>custom-benny-flat</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -55,10 +55,10 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Sans</name>
-      <size>8</size>
+      <name>San Francisco Text</name>
+      <size>14</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -66,8 +66,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Sans</name>
-      <size>8</size>
+      <name>San Francisco Text</name>
+      <size>14</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -75,8 +75,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Sans</name>
-      <size>8</size>
+      <name>San Francisco Text</name>
+      <size>14</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -84,8 +84,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Sans</name>
-      <size>8</size>
+      <name>San Francisco Text</name>
+      <size>14</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -93,8 +93,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Sans</name>
-      <size>8</size>
+      <name>San Francisco Text</name>
+      <size>14</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -102,8 +102,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Sans</name>
-      <size>8</size>
+      <name>San Francisco Text</name>
+      <size>14</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -180,13 +180,12 @@
     <keybind key="W-F11">
       <action name="Reconfigure"/>
     </keybind>
-
     <keybind key="A-S-d">
       <action name="ToggleDecorations"/>
     </keybind>
     <keybind key="C-A-l">
       <action name="Execute">
-        <command>xautolock -locknow</command>
+        <command>xflock4</command>
       </action>
     </keybind>
     <keybind key="C-W-A-Left">
@@ -210,20 +209,31 @@
       </action>
     </keybind>
     <keybind key="C-W-A-Up">
-        <action name="UnmaximizeFull"/>
-        <action name="MoveResizeTo">
-            <height>50%</height>
-        </action>
-        <action name="MoveToEdge"><direction>north</direction></action>
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdge">
+        <direction>north</direction>
+      </action>
     </keybind>
     <keybind key="C-W-A-Down">
-        <action name="UnmaximizeFull"/>
-        <action name="MoveResizeTo">
-            <height>50%</height>
-        </action>
-        <action name="MoveToEdge"><direction>south</direction></action>
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdge">
+        <direction>south</direction>
+      </action>
     </keybind>
     <keybind key="A-d">
+      <action name="Execute">
+        <command>
+          rofi -show ssh -font 'DejaVu Sans 30' -lines 4 -eh 2 -opacity 80 -hide-scrollbar -width 50 -padding 150 -bw 10 -bc "#96b5b4" -bg "#2b303b" -fg "#ffffff" -hlbg "#96b5b4" -hlfg "#2b303b"
+        </command>
+      </action>
+    </keybind>
+    <keybind key="A-space">
       <action name="Execute">
         <command>
           rofi -show run -font 'DejaVu Sans 30' -lines 4 -eh 2 -opacity 80 -hide-scrollbar -width 50 -padding 150 -bw 10 -bc "#96b5b4" -bg "#2b303b" -fg "#ffffff" -hlbg "#96b5b4" -hlfg "#2b303b"
@@ -325,7 +335,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
+    <keybind key="A-,">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
