@@ -15,6 +15,10 @@ set relativenumber
 " set backsapce to delete in insert mode
 set paste
 set backspace=indent,eol,start
+
+if !has('nvim')
+  set encoding=utf8
+end
 """""""""""""""""""""""""""""""""""""""
 " => Leader mappings                  "
 """""""""""""""""""""""""""""""""""""""
@@ -71,7 +75,6 @@ autocmd VimEnter * wincmd p
 filetype plugin on
 filetype indent on
 
-set encoding=utf8
 
 """"""""""""""""""""""""""""""
 " => Status line             "
