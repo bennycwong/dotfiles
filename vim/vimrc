@@ -1,6 +1,14 @@
 "Pathogen Start to install plugins
 execute pathogen#infect()
 
+"Vim Plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" Add plugins to &runtimepath
+call plug#end()
 """""""""""""""""""""""""""""""""""
 " => Set Color/Themes/general look"
 """""""""""""""""""""""""""""""""""
@@ -11,7 +19,7 @@ colorscheme base16-ocean
 let base16colorspace=256
 let g:airline_theme='base16_ocean'
 " set relative line numbers
-set relativenumber
+"#set relativenumber
 " set backsapce to delete in insert mode
 set paste
 set backspace=indent,eol,start
@@ -34,8 +42,8 @@ nmap <leader>so :source $MYVIMRC<cr>
 """""""""""""""""""
 " => Search Settings
 """""""""""""""""""
-map <leader><space> /
-map <leader><c-space> ?
+"map <leader><space> /
+"map <leader><c-space> ?
 set incsearch                          "Incremental Search
 set ic                                 "Case insensitive search
 set hlsearch
@@ -66,9 +74,8 @@ map <F2> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 "
 ""autopen NERDTree and focus cursor in new document
-"autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-
+autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
 "paste toggle indent
 :set pastetoggle=<F3>
 
@@ -132,11 +139,30 @@ set splitbelow
 set splitright
 
 """Paste mode""""
-set paste
-
+set nopaste
+set pastetoggle=<F3>
 """MACVIM options"""
 set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
 set guioptions-=r
 
 """Transparent for pretty"""
 hi Normal ctermbg=none
+"""color column for max line length Column set"""
+"set colorcolumn=100
+"highlight ColorColumn ctermbg=11 guibg=lightgrey
+"""highilght line and column in vim
+"highlight cursorcolumn ctermbg=10 guibg=lightgrey
+"set cursorcolumn "highlight current column
+set cursorline       "highlight current line
+highlight cursorline ctermbg=10 guibg=lightgrey
+
+"""vim-test"""
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+"""Faux CTRL_P with fzf"""
+nmap <c-p> :Files<CR>
+nmap <Leader>p :Commits<cr>

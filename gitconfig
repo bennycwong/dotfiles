@@ -50,7 +50,7 @@
 	ui = true
 [core]
 	autocrlf = input
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = /Users/bwong/.gitignore
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [difftool "sourcetree"]
