@@ -18,8 +18,8 @@ set background=dark
 colorscheme base16-ocean
 let base16colorspace=256
 let g:airline_theme='base16_ocean'
-" set relative line numbers
-"#set relativenumber
+"Set relative line numbers
+set relativenumber
 " set backsapce to delete in insert mode
 set paste
 set backspace=indent,eol,start
@@ -75,7 +75,7 @@ let NERDTreeShowHidden=1
 "
 ""autopen NERDTree and focus cursor in new document
 autocmd VimEnter * NERDTree
-"autocmd VimEnter * wincmd p
+autocmd VimEnter * wincmd p
 "paste toggle indent
 :set pastetoggle=<F3>
 
@@ -166,3 +166,15 @@ nmap <silent> <leader>g :TestVisit<CR>
 """Faux CTRL_P with fzf"""
 nmap <c-p> :Files<CR>
 nmap <Leader>p :Commits<cr>
+
+"""Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"""indentLine
+map <F4> :IndentLinesToggle<CR>
