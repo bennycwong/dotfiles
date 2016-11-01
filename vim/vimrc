@@ -13,9 +13,9 @@ call plug#end()
 " => Set Color/Themes/general look"
 """""""""""""""""""""""""""""""""""
 syntax on
+
 "I have to set background twice to make it work...
 set background=dark
-colorscheme base16-ocean
 let base16colorspace=256
 let g:airline_theme='base16_ocean'
 "Set relative line numbers
@@ -178,3 +178,7 @@ let g:syntastic_check_on_wq = 0
 
 """indentLine
 map <F4> :IndentLinesToggle<CR>
+
+"""set screen color-256
+set term=screen-256color
+colorscheme spacegray
