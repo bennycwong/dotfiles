@@ -75,6 +75,7 @@ let NERDTreeShowHidden=1
 "
 ""autopen NERDTree and focus cursor in new document
 autocmd VimEnter * NERDTree
+
 autocmd VimEnter * wincmd p
 "paste toggle indent
 :set pastetoggle=<F3>
@@ -175,10 +176,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
+let g:syntastic_javascript_checkers = ['eslint']
 """indentLine
 map <F4> :IndentLinesToggle<CR>
 
-"""set screen color-256
-set term=screen-256color
 colorscheme spacegray
+"""vim-go
+let g:go_fmt_command = "goimports"
