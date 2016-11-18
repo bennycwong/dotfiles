@@ -4,8 +4,9 @@ execute pathogen#infect()
 "Vim Plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -16,6 +17,7 @@ syntax on
 
 "I have to set background twice to make it work...
 set background=dark
+""colorscheme base16-ocean
 let base16colorspace=256
 let g:airline_theme='base16_ocean'
 "Set relative line numbers
@@ -180,6 +182,11 @@ let g:syntastic_javascript_checkers = ['eslint']
 """indentLine
 map <F4> :IndentLinesToggle<CR>
 
-colorscheme spacegray
+"colorscheme Spacegray
+syntax on
+color dracula
+let g:spacegray_italicize_comments = 1
+let g:spacegray_underline_search = 1
 """vim-go
+
 let g:go_fmt_command = "goimports"
