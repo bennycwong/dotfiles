@@ -23,7 +23,7 @@ set t_Co=256 " 256 color mode
 set background=dark
 colorscheme base16-tomorrow
 let base16colorspace=256
-let g:airline_theme='base16_ocean'
+let g:airline_theme='base16_tomorrow'
 "Set relative line numbers
 set relativenumber
 " set backsapce to delete in insert mode
@@ -80,7 +80,7 @@ map <F2> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 "
 ""autopen NERDTree and focus cursor in new document
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 
 autocmd VimEnter * wincmd p
 "paste toggle indent
