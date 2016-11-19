@@ -21,7 +21,7 @@ endif
 "I have to set background twice to make it work...
 set t_Co=256 " 256 color mode
 set background=dark
-colorscheme base16-ocean
+colorscheme base16-tomorrow
 let base16colorspace=256
 let g:airline_theme='base16_ocean'
 "Set relative line numbers
