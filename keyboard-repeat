@@ -1,0 +1,2 @@
+defaults write NSGlobalDomain KeyRepeat -int 8
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
