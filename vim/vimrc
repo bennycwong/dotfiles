@@ -175,6 +175,8 @@ nmap <c-p> :Files<CR>
 nmap <Leader>p :Commits<cr>
 
 """Syntastic
+let g:syntastic_mode_map = { 'mode': 'passive' }
+map <F5> :SyntasticToggleMode<CR>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
