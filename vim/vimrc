@@ -23,7 +23,7 @@ set t_Co=256 " 256 color mode
 set background=dark
 colorscheme base16-tomorrow
 let base16colorspace=256
-let g:airline_theme='base16_tomorrow'
+let g:airline_theme='tomorrow'
 "Set relative line numbers
 set relativenumber
 " set backsapce to delete in insert mode
@@ -163,10 +163,13 @@ hi Normal ctermbg=none
 set cursorline       "highlight current line
 highlight cursorline ctermbg=10 guibg=lightgrey
 
+"""Speed up vim"""
+set lazyredraw
+set ttyfast
 """vim-test"""
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
+map <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "dispatch"
@@ -187,6 +190,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 """indentLine
 map <F4> :IndentLinesToggle<CR>
+
+"""show cursor line
+map <F7> :set cursorline!<CR>
+
+
 """vim-go
 
 let g:go_fmt_command = "goimports"
